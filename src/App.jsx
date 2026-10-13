@@ -40,8 +40,8 @@ function App() {
     location: "",
   });
 
-  const API_URL = "http://localhost:8080/api/products";
-  const ORDER_API_URL = "http://localhost:8080/api/orders";
+const API_URL = "https://farm2home-backend-cje5.onrender.com/api/products";
+const ORDER_API_URL = "https://farm2home-backend-cje5.onrender.com/api/orders";
 
   // ================= LOGIN =================
 
@@ -119,7 +119,7 @@ function App() {
   console.log("Sending product:", product);
 
   try {
-    const response = await fetch("/api/products", {
+    const response = await fetch(API_URL,  {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
